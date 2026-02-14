@@ -43,20 +43,21 @@
             overflow: hidden; 
             border: 2px solid var(--accent-color); 
             background: #000;
-            aspect-ratio: 16 / 9; /* Ukuran presisi 16:9 */
+            aspect-ratio: 16 / 9;
         }
         .mySlides { display: none; width: 100%; height: 100%; }
         .mySlides img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
         .caption { color: #fff; font-size: 14px; padding: 12px; position: absolute; bottom: 0; width: 100%; text-align: center; background: rgba(0,0,0,0.7); }
-        .prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); padding: 16px; color: white; font-weight: bold; font-size: 20px; background: rgba(0,0,0,0.3); border: none; z-index: 10; }
-        .next { right: 0; } .prev { left: 0; }
+        .prev, .next { cursor: pointer; position: absolute; top: 50%; transform: translateY(-50%); padding: 16px; color: white; font-weight: bold; font-size: 20px; background: rgba(0,0,0,0.3); border: none; z-index: 10; border-radius: 0 5px 5px 0; }
+        .next { right: 0; border-radius: 5px 0 0 5px; } 
+        .prev:hover, .next:hover { background: var(--accent-color); color: #000; }
 
         .dot-container { text-align: center; margin-bottom: 30px; }
         .dot { cursor: pointer; height: 10px; width: 10px; margin: 0 4px; background-color: #555; border-radius: 50%; display: inline-block; transition: 0.3s; }
         .active { background-color: var(--accent-color); }
 
-        /* --- GRID GALERI 16:9 --- */
+        /* --- GRID GALERI --- */
         .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
         .gallery-item { background-color: var(--card-bg); border-radius: 12px; overflow: hidden; border: 1px solid #333; transition: 0.3s; }
         .gallery-item:hover { border-color: var(--accent-color); transform: translateY(-5px); }
@@ -69,11 +70,13 @@
         .price-table th, .price-table td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
         .price-table th { background-color: var(--primary-color); }
 
-        .btn-wa { display: block; width: fit-content; margin: 40px auto; background-color: #25d366; color: white; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; text-align: center; transition: 0.3s; }
+        .btn-wa { display: block; width: fit-content; margin: 40px auto; background-color: #25d366; color: white; padding: 15px 35px; text-decoration: none; border-radius: 50px; font-weight: bold; text-align: center; transition: 0.3s; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
         .btn-wa:hover { transform: scale(1.05); background-color: #128c7e; }
 
-        .map-container { width: 100%; height: 350px; border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-color); }
-        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.5; }
+        /* --- MAP REVISED --- */
+        .map-container { width: 100%; height: 350px; border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-color); background: #1a1a1a; }
+        
+        footer { text-align: center; padding: 40px; font-size: 0.8rem; opacity: 0.5; border-top: 1px solid #222; }
 
         .fade { animation: fadeEffect 1.5s; }
         @keyframes fadeEffect { from {opacity: .4} to {opacity: 1} }
@@ -82,7 +85,7 @@
 <body>
 
     <div class="marquee-container">
-        <div class="marquee-text">🔥 Rental buka sampai jam 01:00 | 🏆 TURNAMEN PES 2026 Segera Hadir di N.S Game | 📦 Paket Bawa Pulang 12 Jam Cuma 45k! 🔥</div>
+        <div class="marquee-text">🔥 Selama bulan puasa rental buka sampai sahur | 🏆 TURNAMEN PES 2026 Segera Hadir di N.S Game | 📦 Paket Bawa Pulang 12 Jam Cuma 45k! 🔥</div>
     </div>
 
     <header>
@@ -102,11 +105,11 @@
         <section id="gallery-slider" style="margin-top: 50px;">
             <h2>📸 Highlight N.S Game</h2>
             <div class="slider-container">
-                <div class="mySlides fade"><img src="foto1.jpg"><div class="caption">Unit PS3 Terawat & Performa Jos!</div></div>
-                <div class="mySlides fade"><img src="foto2.jpg"><div class="caption">Tempat Nyaman Buat Mabar Seharian</div></div>
-                <div class="mySlides fade"><img src="foto3.jpg"><div class="caption">Stik Wireless Empuk & Responsif</div></div>
-                <div class="mySlides fade"><img src="foto4.jpg"><div class="caption">Parkiran Luas</div></div>
-                <div class="mySlides fade"><img src="foto5.jpg"><div class="caption">Event Tournament</div></div>
+                <div class="mySlides fade"><img src="foto1.jpg" alt="Slide 1"><div class="caption">Unit PS3 Terawat & Performa Jos!</div></div>
+                <div class="mySlides fade"><img src="foto2.jpg" alt="Slide 2"><div class="caption">Tempat Nyaman Buat Mabar Seharian</div></div>
+                <div class="mySlides fade"><img src="foto3.jpg" alt="Slide 3"><div class="caption">Stik Wireless Empuk & Responsif</div></div>
+                <div class="mySlides fade"><img src="foto4.jpg" alt="Slide 4"><div class="caption">Fasilitas Lengkap & Bersih</div></div>
+                <div class="mySlides fade"><img src="foto5.jpg" alt="Slide 5"><div class="caption">Event & Tournament Berkala</div></div>
                 
                 <button class="prev" onclick="plusSlides(-1)">❮</button>
                 <button class="next" onclick="plusSlides(1)">❯</button>
@@ -117,24 +120,6 @@
                 <span class="dot" onclick="currentSlide(3)"></span>
                 <span class="dot" onclick="currentSlide(4)"></span> 
                 <span class="dot" onclick="currentSlide(5)"></span> 
-            </div>
-        </section>
-
-        <section id="gallery-grid" style="margin-top: 50px;">
-            <h2>📸 Galeri Foto</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="foto6.jpg">
-                    <p>Unit PS3 Prima & Stik Nyaman</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto7.jpg">
-                    <p>Tempat mabar yang nyaman dan santai.</p>
-                </div>
-                <div class="gallery-item">
-                    <img src="foto8.jpg">
-                    <p>Aneka camilan dan minuman tersedia.</p>
-                </div>
             </div>
         </section>
 
@@ -158,8 +143,19 @@
         <section id="lokasi" style="margin-top: 50px;">
             <h2>📍 Lokasi Kami</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15843.43572807842!2d108.8340!3d-6.9140!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwNTQnNTAuNCJTIDEwOMKwNTAnMDIuNCJF!5e0!3m2!1sid!2sid!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.106649779344!2d108.825126!3d-6.9967677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f0b791947e4f1%3A0x2d03536391e000af!2sRental%20playstation%20%22N.S%20Game%22!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
             </div>
+            <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #aaa;">
+                Jl. Denah Asih, Tiwulandu, Kec. Banjarharjo, Kab. Brebes.
+            </p>
         </section>
     </div>
 
@@ -169,7 +165,6 @@
         let slideIndex = 1;
         showSlides(slideIndex);
         
-        // Geser otomatis setiap 3 detik
         let autoSlide = setInterval(() => { plusSlides(1); }, 3000);
 
         function plusSlides(n) {
@@ -199,8 +194,8 @@
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
+            if(slides[slideIndex-1]) slides[slideIndex-1].style.display = "block";  
+            if(dots[slideIndex-1]) dots[slideIndex-1].className += " active";
         }
     </script>
 </body>
