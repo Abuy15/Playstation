@@ -28,11 +28,10 @@
         @keyframes marquee { 0% { transform: translate(0, 0); } 100% { transform: translate(-100%, 0); } }
 
         header { background: linear-gradient(135deg, #001d3d 0%, #00439c 100%); padding: 50px 20px; text-align: center; border-bottom: 4px solid var(--accent-color); }
-        header h1 { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; }
+        header h1 { font-family: 'Orbitron', sans-serif; font-size: 2.2rem; }
 
         .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
         h2 { font-family: 'Orbitron', sans-serif; text-align: center; margin-bottom: 20px; color: var(--accent-color); }
-        h2::after { content: ''; display: block; width: 60px; height: 3px; background: var(--accent-color); margin: 10px auto 0; }
 
         .card { background-color: var(--card-bg); padding: 25px; border-radius: 15px; border: 1px solid #333; margin-bottom: 30px; text-align: center; }
         
@@ -44,7 +43,6 @@
             overflow: hidden;
             border: 2px solid var(--accent-color);
             background: #000;
-            position: relative;
         }
         .ratio-box img { width: 100%; height: 100%; object-fit: cover; display: block; }
         .ramadhan-border { border-color: var(--gold); box-shadow: 0 0 15px rgba(255, 215, 0, 0.3); }
@@ -57,12 +55,12 @@
         .active { background-color: var(--accent-color); }
 
         .price-table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        .price-table th, .price-table td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
-        .price-table th { background-color: var(--primary-color); color: white; }
+        .price-table th, .price-table td { padding: 12px; text-align: left; border-bottom: 1px solid #333; }
+        .price-table th { background-color: var(--primary-color); }
 
-        .btn-wa { display: block; width: fit-content; margin: 30px auto; background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; text-align: center; box-shadow: 0 4px 15px rgba(37,211,102,0.3); }
+        .btn-wa { display: block; width: fit-content; margin: 30px auto; background-color: #25d366; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; text-align: center; }
         
-        /* --- MAPS TERBARU --- */
+        /* --- MAPS FIXED --- */
         .map-container { width: 100%; height: 350px; border-radius: 15px; overflow: hidden; border: 2px solid var(--accent-color); }
         
         footer { text-align: center; padding: 30px; font-size: 0.8rem; opacity: 0.5; border-top: 1px solid #222; }
@@ -71,7 +69,7 @@
 <body>
 
     <div class="marquee-container">
-        <div class="marquee-text">🌙 Marhaban ya Ramadhan | Promo Ngabuburit N.S Game | 🔥 Rental buka sampai jam 01:00 | 📦 Paket 12 Jam Cuma 45k! 🔥</div>
+        <div class="marquee-text">🌙 Marhaban ya Ramadhan | Promo Ngabuburit N.S Game | 🔥 Selama bulan ramadhan Rental buka sampai sahur | 📦 Paket 12 Jam Cuma 45k! 🔥</div>
     </div>
 
     <header>
@@ -82,11 +80,7 @@
     <div class="container">
         
         <section>
-            <h2>🎮 Main di Tempat</h2>
-            <div class="card">
-                <span style="font-size: 2.5rem; color: var(--accent-color); font-weight: bold;">Rp 5.000 / Jam</span>
-                <p>Kualitas stik mantap & koleksi game update!</p>
-            </div>
+
         </section>
 
         <section>
@@ -107,6 +101,11 @@
                 <span class="dot"></span> <span class="dot"></span> <span class="dot"></span>
             </div>
         </section>
+            <h2>🎮 Main di Tempat</h2>
+            <div class="card">
+                <span style="font-size: 2.2rem; color: var(--accent-color); font-weight: bold;">Rp 5.000 / Jam</span>
+                <p>Kualitas stik mantap & koleksi game terlengkap!</p>
+            </div>      
 
         <section>
             <h2>🏠 Paket Bawa Pulang</h2>
@@ -115,6 +114,7 @@
                     <thead><tr><th>Durasi</th><th>Harga</th></tr></thead>
                     <tbody>
                         <tr><td>Paket 8 Jam</td><td><strong>Rp 35.000</strong></td></tr>
+                        <tr><td>Paket 10 Jam</td><td><strong>Rp 40.000</strong></td></tr>                       
                         <tr><td>Paket 12 Jam</td><td><strong>Rp 45.000</strong></td></tr>
                         <tr><td>Tambah TV</td><td><strong>Rp 30.000</strong></td></tr>
                     </tbody>
@@ -128,12 +128,12 @@
             <h2>📍 Lokasi Kami</h2>
             <div class="map-container">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m11!1m3!1d15842.1762143494!2d108.8033095!3d-6.9673133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f0b795947e4f1%3A0x2d03536391e000af!2sRental%20playstation%20%22N.S%20Game%22!5e0!3m2!1sid!2sid!4v1707920000000!5m2!1sid!2sid" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.0526363073746!2d108.850409!3d-7.0030589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6e0b795947e4f1%3A0x2d0b536391e000af!2sRental%20playstation%20%22N.S%20Game%22!5e0!3m2!1sid!2sid!4v1707930000000!5m2!1sid!2sid" 
                     width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
             <p style="text-align: center; margin-top: 10px; font-size: 0.8rem; color: #aaa;">
-                Jln denah asih, Tiwulandu, Kec. Banjarharjo, Kabupaten Brebes.
+                Jl. Denah Asih, Tiwulandu, Kec. Banjarharjo, Kab. Brebes.
             </p>
         </section>
     </div>
